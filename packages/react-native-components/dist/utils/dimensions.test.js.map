@@ -1,1 +1,0 @@
-{"version":3,"file":"dimensions.test.js","sourceRoot":"","sources":["../../src/utils/dimensions.test.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,QAAQ,EAAE,MAAM,cAAc,CAAC;AAExC,QAAQ,CAAC,UAAU,EAAE,GAAG,EAAE;IACxB,EAAE,CAAC,oCAAoC,EAAE,GAAG,EAAE;QAC5C,MAAM,CAAC,QAAQ,EAAE,CAAC,CAAC,OAAO,CAAC,GAAG,CAAC,CAAC;IAClC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC"}

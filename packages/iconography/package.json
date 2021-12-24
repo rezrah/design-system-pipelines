@@ -19,9 +19,9 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "devDependencies": {
-    "@types/node": "^14.14.27",
-    "fantasticon": "^1.1.1",
-    "svgo": "^2.2.1",
-    "ts-node": "^9.1.1"
+    "@types/node": "^17.0.4",
+    "fantasticon": "^1.2.3",
+    "svgo": "^2.8.0",
+    "ts-node": "^10.4.0"
   }
 }
