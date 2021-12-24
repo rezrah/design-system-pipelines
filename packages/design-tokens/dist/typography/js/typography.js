@@ -1,0 +1,60 @@
+/**
+ * Do not edit directly
+ * Generated on Fri, 24 Dec 2021 13:06:21 GMT
+ */
+
+export const tokenFontFamily = "Open Sans";
+export const tokenTypographyHeadingDesktopXxlSize = {"original":"36px","number":36,"decimal":0.36,"scale":576};
+export const tokenTypographyHeadingDesktopXxlLineHeight = {"original":"42px","number":42,"decimal":0.42,"scale":672};
+export const tokenTypographyHeadingDesktopXxlWeight = "600";
+export const tokenTypographyHeadingDesktopXlSize = {"original":"32px","number":32,"decimal":0.32,"scale":512};
+export const tokenTypographyHeadingDesktopXlLineHeight = {"original":"40px","number":40,"decimal":0.4,"scale":640};
+export const tokenTypographyHeadingDesktopXlWeight = "600";
+export const tokenTypographyHeadingDesktopLSize = {"original":"28px","number":28,"decimal":0.28,"scale":448};
+export const tokenTypographyHeadingDesktopLLineHeight = {"original":"36px","number":36,"decimal":0.36,"scale":576};
+export const tokenTypographyHeadingDesktopLWeight = "600";
+export const tokenTypographyHeadingDesktopMSize = {"original":"24px","number":24,"decimal":0.24,"scale":384};
+export const tokenTypographyHeadingDesktopMLineHeight = {"original":"32px","number":32,"decimal":0.32,"scale":512};
+export const tokenTypographyHeadingDesktopMWeight = "600";
+export const tokenTypographyHeadingDesktopSSize = {"original":"18px","number":18,"decimal":0.18,"scale":288};
+export const tokenTypographyHeadingDesktopSLineHeight = {"original":"26px","number":26,"decimal":0.26,"scale":416};
+export const tokenTypographyHeadingDesktopSWeight = "600";
+export const tokenTypographyHeadingDesktopXsSize = {"original":"16px","number":16,"decimal":0.16,"scale":256};
+export const tokenTypographyHeadingDesktopXsLineHeight = {"original":"24px","number":24,"decimal":0.24,"scale":384};
+export const tokenTypographyHeadingDesktopXsWeight = "600";
+export const tokenTypographyHeadingDesktopNavSize = {"original":"14px","number":14,"decimal":0.14,"scale":224};
+export const tokenTypographyHeadingDesktopNavLineHeight = {"original":"20px","number":20,"decimal":0.2,"scale":320};
+export const tokenTypographyHeadingDesktopNavWeight = "600";
+export const tokenTypographyHeadingMobileXxlSize = {"original":"30px","number":30,"decimal":0.3,"scale":480};
+export const tokenTypographyHeadingMobileXxlLineHeight = {"original":"36px","number":36,"decimal":0.36,"scale":576};
+export const tokenTypographyHeadingMobileXxlWeight = "600";
+export const tokenTypographyHeadingMobileXlSize = {"original":"26px","number":26,"decimal":0.26,"scale":416};
+export const tokenTypographyHeadingMobileXlLineHeight = {"original":"32px","number":32,"decimal":0.32,"scale":512};
+export const tokenTypographyHeadingMobileXlWeight = "600";
+export const tokenTypographyHeadingMobileLSize = {"original":"22px","number":22,"decimal":0.22,"scale":352};
+export const tokenTypographyHeadingMobileLLineHeight = {"original":"28px","number":28,"decimal":0.28,"scale":448};
+export const tokenTypographyHeadingMobileLWeight = "600";
+export const tokenTypographyHeadingMobileMSize = {"original":"18px","number":18,"decimal":0.18,"scale":288};
+export const tokenTypographyHeadingMobileMLineHeight = {"original":"24px","number":24,"decimal":0.24,"scale":384};
+export const tokenTypographyHeadingMobileMWeight = "600";
+export const tokenTypographyHeadingMobileSSize = {"original":"16px","number":16,"decimal":0.16,"scale":256};
+export const tokenTypographyHeadingMobileSLineHeight = {"original":"24px","number":24,"decimal":0.24,"scale":384};
+export const tokenTypographyHeadingMobileSWeight = "600";
+export const tokenTypographyHeadingMobileXsSize = {"original":"14px","number":14,"decimal":0.14,"scale":224};
+export const tokenTypographyHeadingMobileXsLineHeight = {"original":"20px","number":20,"decimal":0.2,"scale":320};
+export const tokenTypographyHeadingMobileXsWeight = "600";
+export const tokenTypographyHeadingMobileNavSize = {"original":"12px","number":12,"decimal":0.12,"scale":192};
+export const tokenTypographyHeadingMobileNavLineHeight = {"original":"18px","number":18,"decimal":0.18,"scale":288};
+export const tokenTypographyHeadingMobileNavWeight = "600";
+export const tokenTypographyBodyRegularSize = {"original":"16px","number":16,"decimal":0.16,"scale":256};
+export const tokenTypographyBodyRegularLineHeight = {"original":"24px","number":24,"decimal":0.24,"scale":384};
+export const tokenTypographyBodyRegularSpacing = 0.1;
+export const tokenTypographyBodyRegularWeight = "400";
+export const tokenTypographyBodySmallSize = {"original":"14px","number":14,"decimal":0.14,"scale":224};
+export const tokenTypographyBodySmallLineHeight = {"original":"20px","number":20,"decimal":0.2,"scale":320};
+export const tokenTypographyBodySmallSpacing = 0.3;
+export const tokenTypographyBodySmallWeight = "400";
+export const tokenTypographyBodyTinySize = {"original":"11px","number":11,"decimal":0.11,"scale":176};
+export const tokenTypographyBodyTinyLineHeight = {"original":"15px","number":15,"decimal":0.15,"scale":240};
+export const tokenTypographyBodyTinySpacing = 0.5;
+export const tokenTypographyBodyTinyWeight = "400";

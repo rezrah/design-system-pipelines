@@ -1,0 +1,52 @@
+{
+  "name": "@rezrah/figma-to-code-react-native-components",
+  "version": "0.1.1-alpha.63",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "files": [
+    "dist/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:cat-home-experts/toolshed-native.git",
+    "directory": "packages/react-native-components"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "build": "yarn clean && yarn tsc",
+    "clean": "rm -rf ./dist",
+    "test": "jest --config jest.config.js --coverage --colors",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@cat-home-experts/design-tokens": "^0.1.1-alpha.63",
+    "@cat-home-experts/iconography": "^0.1.1-alpha.63"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.12.13",
+    "@testing-library/react-native": "^7.1.0",
+    "@types/jest": "26.0.20",
+    "@types/react": "16.9.41",
+    "@types/react-dom": "16.9.11",
+    "@types/react-native": "0.63.2",
+    "@types/react-test-renderer": "16.9.5",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.65.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-native": "0.63.2",
+    "react-native-vector-icons": "^8.1.0",
+    "react-native-web": "0.15.0",
+    "react-test-renderer": "^17.0.1",
+    "ts-jest": "^26.5.1",
+    "typescript": "^4.1.5"
+  },
+  "peerDependencies": {
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-native": "0.63.2",
+    "react-native-web": "0.15.0"
+  }
+}

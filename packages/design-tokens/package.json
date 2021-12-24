@@ -1,0 +1,32 @@
+{
+  "name": "@rezrah/figma-to-code-design-tokens",
+  "description": "Design tokens based on the CAT design system",
+  "version": "0.1.1-alpha.63",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:cat-home-experts/toolshed-native.git",
+    "directory": "packages/design-tokens"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "build": "yarn clean && ts-node ./src/index.ts",
+    "clean": "rm -rf ./dist/",
+    "test": "jest --config jest.config.js --coverage --colors"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.27",
+    "jest": "^26.6.3",
+    "style-dictionary": "^3.0.0-rc.3",
+    "ts-jest": "^26.5.1",
+    "ts-node": "^9.1.1"
+  },
+  "gitHead": "a5e098966e306595d5349d318a9b0cd684facd29"
+}

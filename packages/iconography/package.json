@@ -1,0 +1,27 @@
+{
+  "name": "@rezrah/figma-to-code-iconography",
+  "description": "icons based on the CAT design system",
+  "version": "0.1.1-alpha.63",
+  "license": "MIT",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "clean": "rm -rf ./dist && mkdir -p dist",
+    "build": "yarn clean && svgo -f ./src -o ./dist/svgs && fantasticon ./dist/svgs -o ./dist && fantasticon ./dist/svgs -o ./dist -n icons-app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:cat-home-experts/toolshed-native.git",
+    "directory": "packages/iconography"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.27",
+    "fantasticon": "^1.1.1",
+    "svgo": "^2.2.1",
+    "ts-node": "^9.1.1"
+  }
+}
