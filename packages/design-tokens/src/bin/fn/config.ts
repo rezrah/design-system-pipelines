@@ -3,12 +3,12 @@ interface Destination {
   format: string;
 }
 
-interface ReturnedConfig {
+interface StyleDictionaryConfig {
   platforms: {
     [key: string]: {
       buildPath: string;
       files: Destination[];
-      prefix: string;
+      prefix?: string;
       transformGroup?: string;
       transforms?: string[];
     };
@@ -27,10 +27,12 @@ export const errorMessagesMap = {
  *
  * @param {string} location a path to a json file in the root properties folder
  */
-export function getStyleDictionaryConfig(location: string): ReturnedConfig {
-  const arr = location.split('/');
+export function getStyleDictionaryConfig(
+  location: string
+): StyleDictionaryConfig {
+  const arr = location.split("/");
 
-  if (arr.length < 3 || arr[0] !== 'properties') {
+  if (arr.length < 3 || arr[0] !== "properties") {
     throw new Error(errorMessagesMap.incorrectFileFormat);
   }
 
@@ -39,47 +41,51 @@ export function getStyleDictionaryConfig(location: string): ReturnedConfig {
 
   const path = sansFilename.reduce((acc, next) => `${acc}/${next}`);
 
-  const buildPath = `dist/${path.replace('properties/', '')}/`;
-  const [filenameSansExtension] = filename.split('.');
+  const buildPath = `dist/${path.replace("properties/", "")}/`;
+  const [filenameSansExtension] = filename.split(".");
 
   return {
     source: [`${path}/${filename}`],
     platforms: {
-      js: {
-        prefix: 'token',
-        transformGroup: 'react-native',
+      scss: {
         buildPath,
+        transformGroup: "scss",
         files: [
           {
-            destination: `js/${filenameSansExtension}.js`,
-            format: 'javascript/es6',
+            format: "scss/map-deep",
+            destination: `scss/${filenameSansExtension}.map.deep.scss`,
           },
         ],
       },
       ts: {
-        prefix: 'token',
-        transforms: [
-          'attribute/cti',
-          'name/cti/camel',
-          'size/rem',
-          'color/hex',
-        ],
         buildPath,
+        transformGroup: "js",
         files: [
           {
+            format: "javascript/es6",
+            destination: `js/${filenameSansExtension}.js`,
+          },
+          {
+            format: "typescript/es6-declarations",
             destination: `js/${filenameSansExtension}.d.ts`,
-            format: 'typings/es6',
+          },
+          {
+            format: "javascript/module",
+            destination: `js/${filenameSansExtension}.module.js`,
+          },
+          {
+            format: "typescript/module-declarations",
+            destination: `js/${filenameSansExtension}.module.d.ts`,
           },
         ],
       },
       json: {
-        prefix: 'token',
-        transformGroup: 'react-native',
+        transformGroup: "react-native",
         buildPath,
         files: [
           {
             destination: `json/${filenameSansExtension}.json`,
-            format: 'json/flat',
+            format: "json/flat",
           },
         ],
       },

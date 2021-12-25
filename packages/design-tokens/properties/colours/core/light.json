@@ -1,0 +1,91 @@
+{
+  "fg": {
+    "default": {
+      "value": "#24292f",
+      "comment": "An optional comment describing what this is for",
+      "attributes": { "category": "color" }
+    },
+    "muted": {
+      "value": "#57606a"
+    },
+    "subtle": {
+      "value": "#6e7781"
+    },
+    "onEmphasis": {
+      "value": "#ffffff"
+    }
+  },
+  "canvas": {
+    "default": {
+      "value": "#ffffff"
+    },
+    "overlay": {
+      "value": "#ffffff"
+    },
+    "subtle": {
+      "value": "#f6f8fa"
+    },
+    "inset": {
+      "value": "#f6f8fa"
+    }
+  },
+  "border": {
+    "default": {
+      "value": "#d0d7de"
+    },
+    "muted": {
+      "value": "hsla(210,18%,87%,1)"
+    },
+    "subtle": {
+      "value": "rgba(27,31,36,0.15)"
+    }
+  },
+  "shadow": {
+    "small": { "value": "0 1px 0 rgba(27,31,36,0.04)" },
+    "medium": { "value": "0 3px 6px rgba(140,149,159,0.15)" },
+    "large": { "value": "0 8px 24px rgba(140,149,159,0.2)" },
+    "extraLarge": { "value": "0 12px 28px rgba(140,149,159,0.3)" }
+  },
+  "neutral": {
+    "emphasisPlus": { "value": "#24292f" },
+    "emphasis": { "value": "#6e7781" },
+    "muted": { "value": "rgba(175,184,193,0.2)" },
+    "subtle": { "value": "rgba(234,238,242,0.5)" }
+  },
+  "accent": {
+    "fg": { "value": "#0969da" },
+    "emphasis": { "value": "#0969da" },
+    "muted": { "value": "rgba(84,174,255,0.4)" },
+    "subtle": { "value": "#ddf4ff" }
+  },
+  "success": {
+    "fg": { "value": "#1a7f37" },
+    "emphasis": { "value": "#2da44e" },
+    "muted": { "value": "rgba(74,194,107,0.4)" },
+    "subtle": { "value": "#dafbe1" }
+  },
+  "attention": {
+    "fg": { "value": "#9a6700" },
+    "emphasis": { "value": "#bf8700" },
+    "muted": { "value": "rgba(212,167,44,0.4)" },
+    "subtle": { "value": "#fff8c5" }
+  },
+  "severe": {
+    "fg": { "value": "#bc4c00" },
+    "emphasis": { "value": "#bc4c00" },
+    "muted": { "value": "rgba(251,143,68,0.4)" },
+    "subtle": { "value": "#fff1e5" }
+  },
+  "danger": {
+    "fg": { "value": "#cf222e" },
+    "emphasis": { "value": "#cf222e" },
+    "muted": { "value": "rgba(255,129,130,0.4)" },
+    "subtle": { "value": "#FFEBE9" }
+  },
+  "done": {
+    "fg": { "value": "#8250df" },
+    "emphasis": { "value": "#8250df" },
+    "muted": { "value": "rgba(194,151,255,0.4)" },
+    "subtle": { "value": "#fbefff" }
+  }
+}

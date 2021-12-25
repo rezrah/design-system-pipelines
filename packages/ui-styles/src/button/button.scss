@@ -1,0 +1,114 @@
+@use "sass:map";
+@use "../../../design-tokens/dist/colours/components/button/scss/light.map.deep.scss"
+  as *;
+
+$btns: map-get($tokens, "btn");
+
+.btn {
+  position: relative;
+  display: inline-block;
+  // stylelint-disable-next-line primer/spacing
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  // stylelint-disable-next-line primer/typography
+  line-height: 20px; // Specifically not inherit our `<body>` default
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid;
+  border-radius: 5px;
+  appearance: none; // Corrects inability to style clickable `input` types in iOS.
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:disabled,
+  &.disabled,
+  &[aria-disabled="true"] {
+    cursor: default;
+  }
+
+  i {
+    font-style: normal;
+    font-weight: 600;
+    opacity: 0.75;
+  }
+
+  .octicon {
+    margin-right: 2px;
+    color: var(--color-fg-muted);
+    vertical-align: text-bottom;
+
+    &:only-child {
+      margin-right: 0;
+    }
+  }
+
+  .Counter {
+    // stylelint-disable-next-line primer/spacing
+    margin-left: 2px;
+    color: inherit;
+    text-shadow: none;
+    vertical-align: top;
+    background-color: var(--color-btn-counter-bg);
+  }
+
+  .dropdown-caret {
+    margin-left: 2px;
+    opacity: 0.8;
+  }
+}
+
+@each $variant, $values in $btns {
+  .btn#{if($variant == "base", "", -#{$variant})} {
+    color: map-get($values, "text");
+    background-color: map-get($values, "bg");
+    border-color: map-get($values, "border");
+    box-shadow: map-get($values, "shadow"), map-get($values, "insetShadow");
+    transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    transition-property: color, background-color, border-color;
+
+    &:hover,
+    &.hover,
+    [open] > & {
+      background-color: map-get($values, "hoverBg");
+      border-color: map-get($values, "hoverBorder");
+      transition-duration: 0.1s;
+    }
+
+    &:active {
+      background-color: map-get($values, "activeBg");
+      border-color: map-get($values, "activeBorder");
+      transition: none;
+    }
+
+    &.selected,
+    &[aria-selected="true"] {
+      background-color: map-get($values, "selectedBg");
+      box-shadow: map-get($values, "selectedShadow");
+    }
+
+    &:disabled,
+    &.disabled,
+    &[aria-disabled="true"] {
+      color: map-get($values, "disabledText");
+      background-color: map-get($values, "disabledBg");
+      border-color: map-get($values, "disabledBorder");
+
+      .octicon {
+        color: map-get($values, "disabledText");
+      }
+    }
+
+    // Keep :focus after :disabled. Allows to see the focus ring even on disabled buttons
+    &:focus,
+    &.focus {
+      border-color: map-get($values, "focusBorder");
+      outline: none;
+      box-shadow: map-get($values, "focusShadow");
+    }
+  }
+}
