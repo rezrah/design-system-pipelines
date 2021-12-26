@@ -7,11 +7,9 @@ $btns: map-get($tokens, "btn");
 .btn {
   position: relative;
   display: inline-block;
-  // stylelint-disable-next-line primer/spacing
   padding: 5px 10px;
   font-size: 12px;
   font-weight: 600;
-  // stylelint-disable-next-line primer/typography
   line-height: 20px; // Specifically not inherit our `<body>` default
   white-space: nowrap;
   vertical-align: middle;

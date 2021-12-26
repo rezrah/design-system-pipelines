@@ -4,16 +4,20 @@
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
-  "repository": "git@github.com:cat-home-experts/toolshed-native.git",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
   "scripts": {
     "build": "lerna run build",
+    "start": "yarn workspace @rezrah/documentation dev",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "pub": "lerna publish prerelease --preid alpha --force-publish",
     "pub:dryrun": "lerna publish prerelease --preid alpha --no-git-tag-version --no-push",
-    "storybook": "yarn workspace @cat-home-experts/storybook storybook",
     "test": "lerna run test"
   },
   "devDependencies": {
@@ -41,15 +45,6 @@
     "extends": [
       "@commitlint/config-conventional",
       "@commitlint/config-lerna-scopes"
-    ]
-  },
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ],
-    "nohoist": [
-      "storybook/**",
-      "reference-app/**"
     ]
   }
 }

@@ -1,6 +1,5 @@
 import StyleDictionary from "style-dictionary";
 import { getStyleDictionaryConfig } from "./bin/fn/config";
-import { generateES6Typings } from "./bin/fn/typings";
 
 /**
  * Self-invoked function that uses style-dictionary to orchestrate
@@ -13,7 +12,7 @@ import { generateES6Typings } from "./bin/fn/typings";
  * 3) Run the build and 🙏
  */
 /* eslint-disable func-names */
-(function () {
+(async function () {
   const sources = [
     "properties/colours/core/light.json",
     "properties/colours/components/button/light.json",

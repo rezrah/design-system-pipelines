@@ -1,17 +1,12 @@
 {
-  "name": "@rezrah/figma-to-code-design-tokens",
+  "name": "@rezrah/design-tokens",
   "description": "Design tokens based on the CAT design system",
-  "version": "0.1.1-alpha.63",
+  "version": "0.1.0-alpha.1",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
     "dist/"
   ],
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com:cat-home-experts/toolshed-native.git",
-    "directory": "packages/design-tokens"
-  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },

@@ -1,17 +1,12 @@
 {
-  "name": "@rezrah/figma-to-code-ui-styles",
+  "name": "@rezrah/css",
   "description": "Design tokens based on the CAT design system",
-  "version": "0.1.1-alpha.63",
+  "version": "0.1.0-alpha.1",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
     "dist/"
   ],
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com:cat-home-experts/toolshed-native.git",
-    "directory": "packages/design-tokens"
-  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
@@ -32,7 +27,7 @@
   },
   "gitHead": "a5e098966e306595d5349d318a9b0cd684facd29",
   "dependencies": {
-    "@rezrah/figma-to-code-design-tokens": "0.1.1-alpha.63",
+    "@rezrah/design-tokens": "0.1.0-alpha.1",
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.5",
     "postcss-cli": "^9.1.0",

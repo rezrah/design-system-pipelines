@@ -1,7 +1,7 @@
 {
-  "name": "@rezrah/figma-to-code-react",
+  "name": "@rezrah/react",
   "description": "Design tokens based on the CAT design system",
-  "version": "0.1.1-alpha.63",
+  "version": "0.1.0-alpha.1",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
@@ -18,7 +18,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@rezrah/figma-to-code-ui-styles": "0.1.1-alpha.63",
+    "@rezrah/css": "0.1.0-alpha.1",
     "@rollup/plugin-json": "^4.1.0"
   },
   "peerDependencies": {

@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
-import { Button } from "@rezrah/figma-to-code-react";
-import buttonData from "@rezrah/figma-to-code-design-tokens/dist/colours/components/button/js/light.module";
+import { Button } from "@rezrah/react";
+import buttonData from "@rezrah/design-tokens/dist/colours/components/button/js/light.module";
 
 type Variants = keyof typeof buttonData.btn;
 

@@ -1,6 +1,6 @@
 .container {
   padding: 0 2rem;
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -19,6 +19,11 @@
   flex-basis: 100%;
   flex: 1;
   padding: 30px;
+}
+
+.main button {
+  display: block;
+  margin: 0 0 1rem;
 }
 
 .footer {

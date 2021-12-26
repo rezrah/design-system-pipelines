@@ -1,8 +1,8 @@
 import React, { MouseEventHandler, FC, ReactNode } from "react";
 
-import styles from "@rezrah/figma-to-code-ui-styles/dist/button/button.css";
+import styles from "@rezrah/css/dist/button/button.css";
 
-import buttonData from "@rezrah/figma-to-code-design-tokens/dist/colours/components/button/js/light.module";
+import buttonData from "@rezrah/design-tokens/dist/colours/components/button/js/light.module";
 
 type Variants = keyof typeof buttonData.btn;
 
