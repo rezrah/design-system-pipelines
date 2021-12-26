@@ -87,6 +87,10 @@ export function getStyleDictionaryConfig(
             destination: `json/${filenameSansExtension}.json`,
             format: "json/flat",
           },
+          {
+            destination: `json/${filenameSansExtension}.nested.json`,
+            format: "json/nested",
+          },
         ],
       },
     },

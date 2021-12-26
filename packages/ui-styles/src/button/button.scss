@@ -74,6 +74,7 @@ $btns: map-get($tokens, "btn");
     &:hover,
     &.hover,
     [open] > & {
+      color: map-get($values, "hoverText");
       background-color: map-get($values, "hoverBg");
       border-color: map-get($values, "hoverBorder");
       transition-duration: 0.1s;
