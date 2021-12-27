@@ -25,10 +25,8 @@
     "rgb-hex": "^4.0.0",
     "style-dictionary": "^3.1.1",
     "ts-jest": "^27.1.2",
-    "ts-node": "^10.4.0"
-  },
-  "gitHead": "a5e098966e306595d5349d318a9b0cd684facd29",
-  "dependencies": {
+    "ts-node": "^10.4.0",
     "@figma-plugin/helpers": "^0.15.2"
-  }
+  },
+  "gitHead": "a5e098966e306595d5349d318a9b0cd684facd29"
 }
