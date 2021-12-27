@@ -13,7 +13,8 @@ interface StyleDictionaryConfig {
       transforms?: string[];
     };
   };
-  source: string[];
+  source?: string[];
+  tokens?: any;
 }
 
 export const errorMessagesMap = {
@@ -28,7 +29,8 @@ export const errorMessagesMap = {
  * @param {string} location a path to a json file in the root properties folder
  */
 export function getStyleDictionaryConfig(
-  location: string
+  location: string,
+  tokens: any
 ): StyleDictionaryConfig {
   const arr = location.split("/");
 
@@ -45,7 +47,8 @@ export function getStyleDictionaryConfig(
   const [filenameSansExtension] = filename.split(".");
 
   return {
-    source: [`${path}/${filename}`],
+    //source: [`${path}/${filename}`],
+    tokens,
     platforms: {
       scss: {
         buildPath,

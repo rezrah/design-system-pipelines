@@ -21,7 +21,7 @@ const Home: NextPage = () => {
                 type={value !== "base" ? value : undefined}
                 onClick={() => console.log("wot")}
               >
-                Primary Button
+                {value.charAt(0).toUpperCase() + value.slice(1)} Button
               </Button>
             );
           })}
@@ -38,7 +38,7 @@ const Home: NextPage = () => {
                 className={type !== "base" ? `btn btn-${type}` : `btn`}
                 onClick={() => console.log("wot")}
               >
-                Primary Button
+                {type.charAt(0).toUpperCase() + type.slice(1)} Button
               </button>
             );
           })}
