@@ -23,8 +23,6 @@ import { figmaRGBToHex, figmaRGBToWebRGB } from "@figma-plugin/helpers";
 
   const properties = await getFileData();
 
-  console.log(properties);
-
   return sources.forEach((location) => {
     const config = getStyleDictionaryConfig(location, properties);
     const ExtendedDictionary = StyleDictionary.extend(config);
