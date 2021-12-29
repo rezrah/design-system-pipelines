@@ -3,6 +3,7 @@ import buttonData from "@rezrah/design-tokens/dist/colours/components/button/js/
 declare type Variants = keyof typeof buttonData.btn;
 interface ButtonProps {
     type?: Variants;
+    useGlobalStylesheet?: boolean;
     children: ReactNode;
     onClick: MouseEventHandler<HTMLButtonElement>;
 }

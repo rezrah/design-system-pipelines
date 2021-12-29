@@ -28,6 +28,28 @@ const Home: NextPage = () => {
             );
           })}
         </div>
+        <div className={styles.seperator}>
+          <h2 className={styles.title}>React</h2>
+          <p className={styles.description}>Global Styles</p>
+          {(
+            Object.keys(buttonData.btn) as Array<keyof typeof buttonData.btn>
+          ).map((value) => {
+            const buttonType = value.toString();
+            const capitalizedButtonType =
+              buttonType.charAt(0).toUpperCase() + buttonType.slice(1);
+
+            return (
+              <Button
+                useGlobalStylesheet
+                key={buttonType}
+                type={value !== "base" ? value : undefined}
+                onClick={() => console.log("clicked!")}
+              >
+                {capitalizedButtonType} Button
+              </Button>
+            );
+          })}
+        </div>
         <div>
           <h2 className={styles.title}>HTML + CSS</h2>
           <p className={styles.description}>Global styles</p>

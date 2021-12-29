@@ -33,15 +33,20 @@ import { figmaRGBToHex, figmaRGBToWebRGB } from "@figma-plugin/helpers";
   });
 })();
 
+type FigmaLayerTypes = "CANVAS" | "GROUP" | "FRAME" | "INSTANCE";
+
 async function getFileData() {
+  if (!process.env.FIGMA_FILE_ID) throw new Error("FIGMA_FILE_ID is required.");
+  if (!process.env.FIGMA_TOKEN) throw new Error("FIGMA_TOKEN is required.");
+
   try {
     const response = await fetch(
-      "https://api.figma.com/v1/files/nlBvX4H7N6d2x1GQLm3BhQ",
+      `https://api.figma.com/v1/files/${process.env.FIGMA_FILE_ID}`,
       {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          "X-Figma-Token": process.env.FIGMA_TOKEN ?? "",
+          "X-Figma-Token": process.env.FIGMA_TOKEN,
         },
       }
     );
@@ -50,15 +55,15 @@ async function getFileData() {
 
     const { children: buttonData } = document.children
       .find(
-        (child: { type: "CANVAS" | "GROUP" | "FRAME"; name: string }) =>
+        (child: { type: FigmaLayerTypes; name: string }) =>
           child.type === "CANVAS" && child.name === "Buttons"
       )
       .children.find(
-        (child: { type: "CANVAS" | "GROUP" | "FRAME"; name: string }) =>
+        (child: { type: FigmaLayerTypes; name: string }) =>
           child.type === "FRAME" && child.name === "Design to code"
       )
       .children.find(
-        (child: { type: "CANVAS" | "GROUP" | "FRAME"; name: string }) =>
+        (child: { type: FigmaLayerTypes; name: string }) =>
           child.type === "FRAME" && child.name === "DESIGN_TO_CODE"
       );
 

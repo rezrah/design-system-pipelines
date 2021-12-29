@@ -8,17 +8,25 @@ type Variants = keyof typeof buttonData.btn;
 
 interface ButtonProps {
   type?: Variants;
+  useGlobalStylesheet?: boolean;
   children: ReactNode;
   onClick: MouseEventHandler<HTMLButtonElement>;
 }
 
-const Button: FC<ButtonProps> = ({ type, children, onClick }) => {
+const Button: FC<ButtonProps> = ({
+  type,
+  children,
+  onClick,
+  useGlobalStylesheet = false,
+}) => {
+  const globalClasses = type ? `btn btn-${String(type)}` : "btn";
+  const moduleClasses = type
+    ? `${styles.btn} ${styles[`btn-${String(type)}`]}`
+    : styles.btn;
+  const classes = useGlobalStylesheet ? globalClasses : moduleClasses;
+
   return (
-    <button
-      type="button"
-      className={`${styles.btn} ${type ? styles[`btn-${String(type)}`] : ""}`}
-      onClick={onClick}
-    >
+    <button type="button" className={classes} onClick={onClick}>
       {children}
     </button>
   );

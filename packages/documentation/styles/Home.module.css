@@ -21,6 +21,10 @@
   padding: 30px;
 }
 
+.seperator {
+  border-right: 1px dashed #ccc;
+}
+
 .main button {
   display: block;
   margin: 0 0 1rem;
