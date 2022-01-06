@@ -9,7 +9,7 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <div>
           <h2 className={styles.title}>React</h2>
-          <p className={styles.description}>Style encapsulation</p>
+          <p className={styles.description}>CSS Modules</p>
           {(
             Object.keys(buttonData.btn) as Array<keyof typeof buttonData.btn>
           ).map((value) => {
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
         </div>
         <div className={styles.seperator}>
           <h2 className={styles.title}>React</h2>
-          <p className={styles.description}>Global Styles</p>
+          <p className={styles.description}>Global stylesheet</p>
           {(
             Object.keys(buttonData.btn) as Array<keyof typeof buttonData.btn>
           ).map((value) => {
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
         </div>
         <div>
           <h2 className={styles.title}>HTML + CSS</h2>
-          <p className={styles.description}>Global styles</p>
+          <p className={styles.description}>Global stylesheet</p>
           {(
             Object.keys(buttonData.btn) as Array<keyof typeof buttonData.btn>
           ).map((value) => {

@@ -10,7 +10,7 @@
     ]
   },
   "scripts": {
-    "build": "turbo run build",
+    "build": "lerna run build",
     "start": "yarn workspace @rezrah/documentation dev",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
