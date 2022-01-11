@@ -16,15 +16,18 @@ import { figmaRGBToHex, figmaRGBToWebRGB } from "@figma-plugin/helpers";
  */
 /* eslint-disable func-names */
 (async function () {
+  const useFigmaApi = Boolean(process.env.USE_FIGMA_API === "true");
+
   const sources = [
     "properties/colours/core/light.json",
     "properties/colours/components/button/light.json",
   ];
 
   const properties = await getFileData();
+  const inputData = useFigmaApi ? properties : sources;
 
   return sources.forEach((location) => {
-    const config = getStyleDictionaryConfig(location, properties);
+    const config = getStyleDictionaryConfig(location, useFigmaApi, inputData);
     const ExtendedDictionary = StyleDictionary.extend(config);
 
     ExtendedDictionary.buildAllPlatforms();

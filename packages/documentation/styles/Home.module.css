@@ -6,7 +6,7 @@
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 2rem 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -131,4 +131,23 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.styledText {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.sotTitle {
+  margin: 50px 0 0;
+  line-height: 1.15;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.sotDesc {
+  text-align: center;
+  margin: 1rem 0;
 }

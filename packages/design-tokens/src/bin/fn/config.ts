@@ -30,7 +30,8 @@ export const errorMessagesMap = {
  */
 export function getStyleDictionaryConfig(
   location: string,
-  tokens: any
+  useFigmaApi: boolean,
+  tokens?: any
 ): StyleDictionaryConfig {
   const arr = location.split("/");
 
@@ -45,10 +46,12 @@ export function getStyleDictionaryConfig(
 
   const buildPath = `dist/${path.replace("properties/", "")}/`;
   const [filenameSansExtension] = filename.split(".");
+  const inputData = useFigmaApi
+    ? { tokens }
+    : { source: [`${path}/${filename}`] };
 
   return {
-    //source: [`${path}/${filename}`],
-    tokens,
+    ...inputData,
     platforms: {
       scss: {
         buildPath,
