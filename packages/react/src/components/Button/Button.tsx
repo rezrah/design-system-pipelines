@@ -7,7 +7,14 @@ import buttonData from "@rezrah/design-tokens/dist/colours/components/button/js/
 type Variants = keyof typeof buttonData.btn;
 
 interface ButtonProps {
+  /**
+   * Dynamically built from the source of truth
+   */
   type?: Variants;
+  /**
+   * Useful if the global stylesheet is already cached on the client,
+   * and you don't need style encapsulation.
+   */
   useGlobalStylesheet?: boolean;
   children: ReactNode;
   onClick: MouseEventHandler<HTMLButtonElement>;
