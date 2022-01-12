@@ -5,33 +5,34 @@ import fetch from "node-fetch";
 import { figmaRGBToHex, figmaRGBToWebRGB } from "@figma-plugin/helpers";
 
 /**
- * Self-invoked function that uses style-dictionary to orchestrate
- * the creation of design tokens.
- *
- * Need to create some new tokens?
- *
- * 1) Create a new properties file, following all existing precedents
- * 2) Add the path to sources array below
- * 3) Run the build and 🙏
+ * Orchestrate design token creation.
  */
-/* eslint-disable func-names */
 (async function () {
-  const useFigmaApi = Boolean(process.env.USE_FIGMA_API === "true");
-
   const sources = [
-    "properties/colours/core/light.json",
     "properties/colours/components/button/light.json",
+    "properties/colours/core/light.json",
   ];
 
+  const useFigmaApi = Boolean(process.env.USE_FIGMA_API === "true");
+
+  // Build from local design token data (Primitives as Source of truth)
+  if (!useFigmaApi) {
+    return sources.forEach((location) => {
+      const config = getStyleDictionaryConfig(location, false, sources);
+      const ExtendedDictionary = StyleDictionary.extend(config);
+
+      ExtendedDictionary.buildAllPlatforms();
+    });
+  }
+
+  // Build from remote Figma data (Figma as Source of truth)
   const properties = await getFileData();
-  const inputData = useFigmaApi ? properties : sources;
 
-  return sources.forEach((location) => {
-    const config = getStyleDictionaryConfig(location, useFigmaApi, inputData);
-    const ExtendedDictionary = StyleDictionary.extend(config);
+  const config = getStyleDictionaryConfig(sources[0], true, properties);
 
-    ExtendedDictionary.buildAllPlatforms();
-  });
+  const ExtendedDictionary = StyleDictionary.extend(config);
+
+  return ExtendedDictionary.buildAllPlatforms();
 })();
 
 type FigmaLayerTypes = "CANVAS" | "GROUP" | "FRAME" | "INSTANCE";
