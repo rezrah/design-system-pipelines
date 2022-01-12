@@ -1,6 +1,6 @@
 {
   "name": "@rezrah/design-tokens",
-  "description": "Design tokens based on the CAT design system",
+  "description": "Design tokens creation",
   "version": "0.1.0-alpha.1",
   "license": "MIT",
   "main": "dist/index.js",
@@ -27,6 +27,5 @@
     "ts-jest": "^27.1.2",
     "ts-node": "^10.4.0",
     "@figma-plugin/helpers": "^0.15.2"
-  },
-  "gitHead": "a5e098966e306595d5349d318a9b0cd684facd29"
+  }
 }
