@@ -1,6 +1,6 @@
 {
   "name": "@rezrah/css",
-  "description": "Design tokens based on the CAT design system",
+  "description": "CSS files generated from design tokens",
   "version": "0.1.0-alpha.1",
   "license": "MIT",
   "main": "dist/index.js",
