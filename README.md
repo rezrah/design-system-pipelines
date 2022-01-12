@@ -18,7 +18,7 @@ To demonstrate this working pipeline, a local webserver will render **both** rea
 
 ### What does it do?
 
-- Builds design tokens programmatically in multiple formats
+- Builds design tokens programmatically in multiple formats (associative maps, arrays, etc) supporting various compiler languages (`sass`, `json`, `js` etc)
 - Builds CSS stylesheets programmatically using design token output
 - Builds React components that dynamically adapt to changes in design tokens and css stylesheets (above)
 - Support for Figma API, to enable fully end-to-end, real-time build pipelines
