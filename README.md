@@ -16,11 +16,30 @@ A working demonstration for end-to-end [build piplelines](<https://en.wikipedia.
 
 ### Try it out
 
+#### Design tokens as source of truth
+
 ```
 $ yarn        // install monorepo dependencies
 $ yarn build  // build tokens, css and react
 $ yarn start  // open docs
 ```
+
+#### Figma as source of truth
+
+1. Create a .env file with the following variables:
+
+   ```
+   FIGMA_TOKEN=<enter your figma token here>
+   FIGMA_FILE_ID=<enter your figma file here>
+   USE_FIGMA_API=true
+   ```
+
+2. Run the following commands
+   ```
+   $ yarn        // install monorepo dependencies
+   $ yarn build  // build tokens, css and react
+   $ yarn start  // open docs
+   ```
 
 ### Tech stack
 
