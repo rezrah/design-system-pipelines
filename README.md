@@ -22,7 +22,7 @@ To demonstrate this working pipeline, a local webserver will render **both** rea
 
 ### Try it out
 
-#### Design tokens as source of truth
+#### Design tokens (JSON) as source of truth
 
 ```
 $ yarn        // install monorepo dependencies
