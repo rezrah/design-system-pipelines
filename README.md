@@ -8,13 +8,9 @@ A working demonstration for end-to-end [build piplelines](<https://en.wikipedia.
 
 To demonstrate this working pipeline, a local webserver will render **both** react components and native HTML buttons to use the exact same design language as defined in the upstream CSS and design tokens.
 
-#### Figma as SoT
+### Watch the demo here
 
-![Screenshot 2022-01-12 at 14 30 29](https://user-images.githubusercontent.com/13340707/149166428-f60e6e06-3d52-49f5-b340-4e76d2f3f771.png)
-
-#### Offline JSON as SoT
-
-![Screenshot 2022-01-12 at 15 04 35](https://user-images.githubusercontent.com/13340707/149166432-6d140b76-379e-4da5-b5d2-51d137e7cc15.png)
+[https://www.loom.com/share/c16b2e77317b49a083713bde49d4c517](https://www.loom.com/share/c16b2e77317b49a083713bde49d4c517)
 
 ### What does it do?
 
